@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/currency_fragment_layout"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/spinnerLayount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/fromTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                android:textSize="12sp"
+                />
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/toText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                android:textSize="12sp"/>
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ligne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:color="#ffffff"
+            android:contentDescription="@string/divider"
+            android:layout_below="@id/linear1"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_textfield" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spinnerLayount"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/c_f_flag"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/flag1"
+            android:src="@drawable/united" />
+
+        <TextView
+            android:id="@+id/c_f_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/c_f_flag"
+            android:layout_toRightOf="@id/c_f_flag"
+            android:text="@string/united_states_dollar1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"/>
+
+        <LinearLayout
+            android:id="@+id/ammountLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/c_f_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="30" />
+            <ImageView
+                android:id="@+id/c_f_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/symbol"
+                android:src="@drawable/ic_autorenew_black_24dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/c_f_flag2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ammountLayout"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/flag2"
+            android:src="@drawable/united" />
+
+        <TextView
+            android:id="@+id/c_f_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ammountLayout"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/c_f_flag2"
+            android:layout_toRightOf="@id/c_f_flag2"
+            android:text="@string/united_states_dollar1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLength="30"
+            android:textColor="@color/redLight"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/convert"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</RelativeLayout>
