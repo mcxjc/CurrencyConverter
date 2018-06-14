@@ -6,7 +6,7 @@
     android:padding="12dp">
 
     <ImageView
-        android:id="@+id/spinnerCoutryFlag"
+        android:id="@+id/spinnerCountryFlag"
         android:layout_width="40dp"
         android:layout_height="30dp"
         android:background="@drawable/albania"
